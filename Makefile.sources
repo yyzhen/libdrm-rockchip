@@ -36,6 +36,8 @@ LIBDRM_INCLUDE_H_FILES := \
 	include/drm/vc4_drm.h \
 	include/drm/via_drm.h \
 	include/drm/virtgpu_drm.h
+	include/drm/vgem_drm.h \
+	include/drm/via_drm.h
 
 LIBDRM_INCLUDE_VMWGFX_H_FILES := \
 	include/drm/vmwgfx_drm.h
