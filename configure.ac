@@ -566,6 +566,7 @@ AC_CONFIG_FILES([
 	tests/amdgpu/Makefile
 	tests/vbltest/Makefile
 	tests/exynos/Makefile
+	tests/rockchip/Makefile
 	tests/tegra/Makefile
 	tests/nouveau/Makefile
 	tests/etnaviv/Makefile
