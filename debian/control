@@ -3,8 +3,7 @@ Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Andreas Boll <andreas.boll.dev@gmail.com>
 Build-Depends:
- debhelper (>= 9),
- dh-autoreconf,
+ debhelper (>= 10),
  quilt,
  xsltproc,
  docbook-xsl,
@@ -16,15 +15,15 @@ Build-Depends:
  libpciaccess-dev,
  valgrind [amd64 armhf i386 mips mipsel powerpc s390x],
  libbsd-dev [kfreebsd-any],
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Section: libs
 Vcs-Git: https://anonscm.debian.org/git/pkg-xorg/lib/libdrm.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-xorg/lib/libdrm.git
-Homepage: http://cgit.freedesktop.org/mesa/drm/
+Homepage: https://cgit.freedesktop.org/mesa/drm/
 
 Package: libdrm-dev
 Section: libdevel
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  libdrm2 (= ${binary:Version}),
  libdrm-rockchip1 (= ${binary:Version}) [any-arm arm64],
@@ -40,7 +39,7 @@ Description: Userspace interface to kernel DRM services -- development files
  This package provides the development environment for libdrm.
 
 Package: libdrm2
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -58,7 +57,7 @@ Description: Userspace interface to kernel DRM services -- runtime
 Package: libdrm2-udeb
 Package-Type: udeb
 Section: debian-installer
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -68,7 +67,7 @@ Description: Userspace interface to kernel DRM services -- runtime
 Package: libdrm2-dbg
 Section: debug
 Priority: extra
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  libdrm2 (= ${binary:Version}),
  ${misc:Depends},
@@ -143,7 +142,7 @@ Description: Userspace interface to nouveau-specific kernel DRM -- debugging sym
  This package provides the debugging symbols for the libdrm-nouveau2 package.
 
 Package: libdrm-radeon1
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -159,7 +158,7 @@ Description: Userspace interface to radeon-specific kernel DRM services -- runti
 Package: libdrm-radeon1-dbg
 Section: debug
 Priority: extra
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  libdrm-radeon1 (= ${binary:Version}),
  ${misc:Depends},
@@ -267,7 +266,7 @@ Description: Userspace interface to exynos-specific kernel DRM services -- debug
  This package provides the debugging symbols for the libdrm-exynos1 package.
 
 Package: libdrm-tegra0
-Architecture: any-arm
+Architecture: any-arm arm64
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -283,7 +282,7 @@ Description: Userspace interface to tegra-specific kernel DRM services -- runtim
 Package: libdrm-tegra0-dbg
 Section: debug
 Priority: extra
-Architecture: any-arm
+Architecture: any-arm arm64
 Depends:
  libdrm-tegra0 (= ${binary:Version}),
  ${misc:Depends},
@@ -298,7 +297,7 @@ Description: Userspace interface to tegra-specific kernel DRM services -- debugg
  This package provides the debugging symbols for the libdrm-tegra0 package.
 
 Package: libdrm-amdgpu1
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -314,7 +313,7 @@ Description: Userspace interface to amdgpu-specific kernel DRM services -- runti
 Package: libdrm-amdgpu1-dbg
 Section: debug
 Priority: extra
-Architecture: any
+Architecture: linux-any kfreebsd-any
 Depends:
  libdrm-amdgpu1 (= ${binary:Version}),
  ${misc:Depends},

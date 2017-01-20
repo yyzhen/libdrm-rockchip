@@ -1,7 +1,61 @@
-libdrm (2.4.68-2) unstable; urgency=low
-  * Add supprt for rockchip
+libdrm (2.4.74-2) unstable; urgency=medium
 
- -- Randy Li <randy.li@rock-chips.com>  Fri, 15 Jul 2016 13:52:01 +0800
+  * Add rockchip drm support
+
+ -- yuyz <yuyz@rock-chips.com>  Fri, 20 Jan 2017 16:01:04 +0100
+
+libdrm (2.4.74-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update debian/upstream/signing-key.asc.
+  * Bump libdrm2's, libdrm-freedreno1's and libdrm-intel1's symbols and
+    shlibs.
+  * Bump debhelper compat to 10.
+
+ -- Andreas Boll <andreas.boll.dev@gmail.com>  Tue, 29 Nov 2016 19:01:04 +0100
+
+libdrm (2.4.73-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump libdrm2's, libdrm-amdgpu1's, libdrm-freedreno1's and libdrm-
+    intel1's symbols and shlibs.
+  * Update a bunch of URLs in packaging to https.
+
+ -- Andreas Boll <andreas.boll.dev@gmail.com>  Tue, 15 Nov 2016 15:43:02 +0100
+
+libdrm (2.4.71-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols file and bump shlibs for libdrm2.
+  * Update libdrm-intel1.symbols and shlibs.
+  * Remove Hurd from the architecture list. It FTBFS, haven't built in
+    the past and won't be useful without the equivalent of the Linux
+    Direct Rendering Manager (DRM) subsystem.
+
+ -- Andreas Boll <andreas.boll.dev@gmail.com>  Thu, 06 Oct 2016 10:31:27 +0200
+
+libdrm (2.4.70-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update libdrm-freedreno1.symbols and shlibs.
+  * source/local-options: Add more files to extend-diff-ignore option.
+    Fixes 17 patch-system-but-direct-changes-in-diff lintian warnings.
+
+ -- Andreas Boll <andreas.boll.dev@gmail.com>  Mon, 25 Jul 2016 12:32:20 +0200
+
+libdrm (2.4.69-1) unstable; urgency=medium
+
+  [ Andreas Boll ]
+  * New upstream release.
+  * Update debian/upstream/signing-key.asc.
+  * Bump Standards-Version to 3.9.8, no changes needed.
+  * Update watch url to use https instead of http.
+
+  [ Julien Cristau ]
+  * Build libdrm-tegra on arm64 (closes: #828023).  Thanks, Martin Michlmayr!
+
+ -- Andreas Boll <andreas.boll.dev@gmail.com>  Thu, 21 Jul 2016 10:25:17 +0200
+
 libdrm (2.4.68-1) unstable; urgency=medium
 
   * New upstream release. (LP: #1577735)
